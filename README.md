@@ -5,7 +5,10 @@ I have a lot of rechargeable batteries and it became a mess to know which are go
 
 Prerequisites: a web server with Mysql and Php.
 
-It is still at an early stage, so there are still some actions that need to be performed directly through SQL commands.
+It is still at an early stage, so there are still some actions that need to be performed directly through SQL commands, and it is just a working prototype.
 
 To install, deploy the create_xxx.sql script that will create the necessary tables (beware that you have to create the user/database first, the names are "batteries" by default but can be changed in the sql script).
-Add a user of your choice. As long as you connect through a local network (192.168.x.x) it auto-connects to user with ID 1, otherwise a login is required.
+Add a user of your choice in table user. As long as you connect through a local network (192.168.x.x) it auto-connects to user with ID 1, otherwise a login is required.
+Create a file "connect.ini" by copying the template and fill in your password and optionally the other info.
+Then you should manually create some battery types in the table batttype (for instance AA and AAA batteries).
+Charging devices should also be added manually, but other devices can be added directly.
